@@ -1,0 +1,41 @@
+<div class="table-container">
+    <h1>Liste des Candidats</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for (candidats of candidats; track candidats) {
+                <tr>
+                    <td>{{ candidats.nom }}</td>
+                    <td>{{ candidats.prenom }}</td>
+                    <td>{{ candidats.email }}</td>
+                    <td>{{ candidats.telephone }}</td>
+                    <td>
+                      <button (click)="modifierUtilisateur(candidats.id)" class="modifier">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      
+                      <button (click)="supprimerUtilisateur(candidats.id)" class="supprimer">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>                  
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="#" class="ajouter-button">
+      <button>
+        Ajouter un Candidat
+      </button>
+    </a>
+    <a class="retour-button">
+        <button routerLink="/dashboard">Retour</button>
+    </a>
+  </div>

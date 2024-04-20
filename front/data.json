@@ -1,0 +1,183 @@
+{
+    "users": [
+        {
+            "nom": "Chimot",
+            "prenom": "Cedric",
+            "telephone": "01/01/01/01/01",
+            "email": "cedric02@gmail.com",
+            "pseudo": "ced02830",
+            "mdp": "Ced@02830",
+            "role": "ADMIN",
+            "noteMoyenne": null
+        },
+        {
+            "nom": "Lefevre",
+            "prenom": "Marie",
+            "telephone": "0123456789",
+            "email": "user2@example.com",
+            "pseudo": "mlefevre",
+            "mdp": "Elef@1234",
+            "role": "FORMATEUR",
+            "note_moyenne": 4.2
+        },
+        {
+            "nom": "Petit",
+            "prenom": "Paul",
+            "telephone": "0987654321",
+            "email": "user3@example.com",
+            "pseudo": "ppetit",
+            "mdp": "Ppetit@1234",
+            "role": "CANDIDAT",
+            "note_moyenne": null
+        },
+        {
+            "nom": "Roux",
+            "prenom": "Sophie",
+            "telephone": "0123456789",
+            "email": "admin2@example.com",
+            "pseudo": "sroux",
+            "mdp": "Sroux@1234",
+            "role": "STAGIAIRE",
+            "note_moyenne": null
+        },
+        {
+            "nom": "Moreau",
+            "prenom": "Lucas",
+            "telephone": "0987654321",
+            "email": "user4@example.com",
+            "pseudo": "lmoreau",
+            "mdp": "Lmoreau@1234",
+            "role": "FORMATEUR",
+            "note_moyenne": 4.1
+        },
+        {
+            "nom": "Girard",
+            "prenom": "Emma",
+            "telephone": "0123456789",
+            "email": "user5@example.com",
+            "pseudo": "egirard",
+            "mdp": "Egirard@1234",
+            "role": "STAGIAIRE",
+            "note_moyenne": null
+        }
+    ],
+
+    "formations": [ 
+        {
+            "id": 1,
+            "nom": "Formation JavaScript",
+            "prix": 500,
+            "description": "Apprenez les bases du JavaScript, un langage de programmation essentiel pour le développement web.",
+            "img": "../../../../assets/images/photo6.jpg"
+        },
+        {
+            "id": 2,
+            "nom": "Formation Python",
+            "prix": 600,
+            "description": "Découvrez Python, un langage de programmation puissant et flexible, largement utilisé dans le domaine de la science des données.",
+            "img": "../../../../assets/images/photo5.jpg"
+        },
+        {
+            "id": 3,
+            "nom": "Formation HTML/CSS",
+            "prix": 400,
+            "description": "Maîtrisez les fondamentaux du HTML et du CSS, les technologies de base pour la création de sites web.",
+            "img": "../../../../assets/images/photo4.jpg"
+        },
+        {
+            "id": 4,
+            "nom": "Formation React",
+            "prix": 700,
+            "description": "Apprenez à utiliser React, une bibliothèque JavaScript pour la construction d'interfaces utilisateur modernes et réactives.",
+            "img": "../../../../assets/images/photo3.jpg"
+        },
+        {
+            "id": 5,
+            "nom": "Formation Node.js",
+            "prix": 800,
+            "description": "Explorez Node.js, un environnement d'exécution JavaScript côté serveur pour le développement d'applications web évolutives.",
+            "img": "../../../../assets/images/photo2.jpg"
+        },
+        {
+            "id": 6,
+            "nom": "Formation Express.js",
+            "prix": 900,
+            "description": "Découvrez Express.js, un framework pour Node.js, idéal pour développer des applications web et des API rapidement et efficacement.",
+            "img": "../../../../assets/images/photo3.jpg"
+        }
+    ],
+
+    "bootcamps" : [
+        {
+            "id": 1,
+            "dateDebut": "2024-01-01",
+            "dateFin": "2024-06-30",
+            "statut": "En cours",
+            "formation": 3
+        },
+        {
+            "id": 2,
+            "dateDebut": "2024-02-01",
+            "dateFin": "2024-07-31",
+            "statut": "Terminé",
+            "formation": 1
+        },
+        {
+            "id": 3,
+            "dateDebut": "2024-03-01",
+            "dateFin": "2024-08-31",
+            "statut": "En cours",
+            "formation": 2
+        },
+        {
+            "id": 4,
+            "dateDebut": "2024-04-01",
+            "dateFin": "2024-09-30",
+            "statut": "Terminé",
+            "formation": 4
+        },
+        {
+            "id": 5,
+            "dateDebut": "2024-05-01",
+            "dateFin": "2024-10-31",
+            "statut": "En cours",
+            "formation": 5
+        },
+        {
+            "id": 6,
+            "dateDebut": "2024-06-01",
+            "dateFin": "2024-11-30",
+            "statut": "Terminé",
+            "formation": 6
+        },
+        {
+            "id": 7,
+            "dateDebut": "2024-07-01",
+            "dateFin": "2025-01-31",
+            "statut": "En cours",
+            "formation": 1
+        },
+        {
+            "id": 8,
+            "dateDebut": "2024-08-01",
+            "dateFin": "2025-02-28",
+            "statut": "Terminé",
+            "formation": 2
+        },
+        {
+            "id": 9,
+            "dateDebut": "2024-09-01",
+            "dateFin": "2025-03-31",
+            "statut": "En cours",
+            "formation": 3
+        },
+        {
+            "id": 10,
+            "dateDebut": "2024-10-01",
+            "dateFin": "2025-04-30",
+            "statut": "Terminé",
+            "formation": 4
+        }
+    ]
+
+}

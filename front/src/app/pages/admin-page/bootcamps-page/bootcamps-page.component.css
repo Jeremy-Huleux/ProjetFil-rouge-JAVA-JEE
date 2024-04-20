@@ -1,0 +1,66 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 220px; /* Ajoute une marge basse pour dégager de l'espace avec le footer */
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #90a3e2;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #5065A8;
+    color: #F2EEE4;
+}
+
+th {
+    background-color: #5065A8;
+    color: #F2EEE4;
+}
+
+button i {
+    margin-right: 8px;
+    font-size: 1.5em;
+}
+
+button.modifier {
+    color: #4caf50;
+    border: none;
+    background-color: transparent;
+}
+
+button.supprimer {
+    color: #f44336;
+    border: none;
+    background-color: transparent;
+}
+
+.ajouter-button button, .retour-button button {
+    margin-top: 10px;
+    padding: 15px 25px;
+    text-align: center;
+    display: inline-block;
+    background-color: #5065A8;
+    color: #f2f2f2;
+    border: 0.2em;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+.ajouter-button:hover button, .retour-button:hover button {
+    background-color:#f2f2f2;
+    color:#5065A8;
+}

@@ -1,0 +1,48 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 220px; /* Ajoute une marge basse pour dégager de l'espace avec le footer */
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #5065A8;
+    color: #F2EEE4;
+}
+
+th {
+    background-color: #5065A8;
+    color: #F2EEE4;
+}
+
+button i {
+    margin-right: 8px;
+    font-size: 1.5em;
+}
+
+button.modifier {
+    color: #4caf50;
+    border: none;
+    background-color: transparent;
+}
+
+button.supprimer {
+    color: #f44336;
+    border: none;
+    background-color: transparent;
+}

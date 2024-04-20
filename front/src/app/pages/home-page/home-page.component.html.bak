@@ -1,0 +1,44 @@
+
+<!-- 
+    Boucle for sur productSlice (choix de 6 formations présente dans la BDD), 
+    avec index pour récupérer la bonne class CSS (box on, box two, ...) 
+    les bonnes class CSS sont intégré dans un tableau nommé box
+-->
+<div class="container">
+
+    @for ( productElement of productSlice; track productSlice; let i = $index) {
+        <div 
+            routerLink="/products/formations/{{ productElement.id }}" 
+            [class]="box[i % box.length]"
+            [style.--img]="'url(' + productElement.img + ')'" 
+            [attr.data-text]="productElement.nom">
+        </div>
+    }
+
+</div>
+
+<br>
+
+<div class="presentation">
+    <div class="text"><br><br>
+        <h1>"Explorez, apprenez, innovez - avec notre expertise IT."</h1>
+        <p>Bienvenue à IT Training, notre centre de formation dédié à l'excellence dans le domaine des technologies de l'information (TI). Chez IT Training, nous nous engageons à fournir une éducation de qualité et à préparer nos apprenants à exceller dans l'univers dynamique et en constante évolution de l'informatique.</p>
+        <button routerLink="/aPropos" class="button1" type="button" > En Savoir plus</button>
+    </div>
+</div>
+        <br>
+<div class="box3">
+        <div class="map"><img src="./../../../assets/images/map.jpg" width="550px" height="350px"></div>
+            <div class="text2"><p><strong>"IT-Training" </strong> est idéalement situé au cœur de Lille, offrant un accès pratique aux apprenants de toute la région. Niché dans un quartier dynamique et accessible, notre emplacement central est facilement accessible en transports en commun et en voiture, ce qui facilite votre voyage vers notre établissement. Nous sommes fiers d'être situés dans un environnement propice à l'apprentissage, entourés de commodités telles que des cafés, des restaurants et des espaces verts, offrant ainsi un cadre inspirant pour votre développement professionnel. De plus, notre proximité avec les entreprises locales nous permet d'établir des partenariats solides, offrant à nos apprenants des opportunités uniques de réseautage et d'immersion dans le monde professionnel. Que vous soyez un professionnel en reconversion ou un étudiant désireux d'acquérir de nouvelles compétences, notre emplacement stratégique vous offre un cadre idéal pour atteindre vos objectifs d'apprentissage et de développement.
+            </p>
+        </div>
+</div>
+
+<div class="circle-container">
+    <div class="circle" data-percentage="80">+30000 personne formées/an</div>
+    <div class="circle" data-percentage="60">+85% participants Satisfaits</div>
+    <div class="circle" data-percentage="10">4,5/5 Avis Clients</div>
+    <div class="circle" data-percentage="40">9/10 Notre Note Pedagogique</div>
+    <div class="circle" data-percentage="20">7000 établissement Clients</div>
+    
+</div>

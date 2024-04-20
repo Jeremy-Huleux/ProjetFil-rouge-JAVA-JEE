@@ -1,0 +1,64 @@
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="container">
+
+        <h2>Inscrivez-vous</h2>
+        <form [formGroup]="usersForm" (ngSubmit)="onSubmit()">
+        <div class="box1">   
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" formControlName="nom" placeholder="Nom">
+                    <br>
+                    @if (submitted && !form['nom'].valid) {
+                    <span class="text-danger small">*Nom invalide</span>}
+                    
+                    <input type="text" formControlName="prenom" placeholder="Prenom">
+                    @if (submitted && !form['prenom'].valid) {
+                    <span class="text-danger small">*Prenom invalide</span>}
+                    <br>
+                    <input type="email" formControlName="telephone" placeholder="Téléphone">
+                    <br>
+                    @if (submitted && !form['telephone'].valid) {
+                    <span class="text-danger small">*Téléphone invalide</span>}
+                </div>
+                </div>
+                <div class="form-group">
+                <div class="input-group">
+                    <input type="email" formControlName="email" placeholder="Email">
+                    <br>
+                    @if (submitted && !form['email'].valid) {
+                    <span class="text-danger small">*Email invalide</span>}
+                </div>
+                <div class="input-group">
+                    <input type="text" formControlName="pseudo" placeholder="Pseudo">
+                    <br>
+                    @if (submitted && !form['pseudo'].valid) {
+                    <span class="text-danger small">*Pseudo invalide</span>}
+                </div>
+                <div class="input-group">
+                    <input type="text" formControlName="mdp" placeholder="Mot de passe">
+                    <br>
+                    @if (submitted && !form['mdp'].valid) {
+                    <span class="text-danger small"><br>
+                    *Le mot de passe doit contenir au moins 8 caractères, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial
+                    </span>}
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn btn-success p-3 m-4">S'inscrire</button>
+                    <button type="reset" class="btn btn-danger p-3 m-4">Annuler</button>
+                </div>
+                <div class="input-group">
+                    <p>Vous avez déjà un compte ?</p>
+                        <button  routerLink="/connexion" class="btn btn-success p-3 m-4">Connectez-vous !</button>
+                        
+                </div>
+                </div>
+            </div> 
+        </form>
+    </div>
+
+  </section>  
+</body>

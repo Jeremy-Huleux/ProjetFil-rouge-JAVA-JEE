@@ -1,0 +1,101 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:108.5vh;
+    background: linear-gradient(to bottom,#F2EEE4,#90a3e2);
+}
+
+section .color{
+    position: cover;
+    filter: blur(250px);
+}
+
+.inscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #F2EEE4, #90a3e2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 0.3px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+  
+.inscription-form h2 {
+    color: #5065A8;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.inscription-form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background: #F2EEE4;
+}
+  
+.inscription-form h3 {
+    color: #5065A8;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+  
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.form-group label {
+    color: #5065A8;
+    margin-bottom: 3px;
+}
+  
+.form-group input {
+  width: 100%; /* Ajustez la largeur selon vos besoins */
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.form-group h4 {
+    color: #5065A8;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+  
+.btn {
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 20px;
+    color: #90a3e2;
+    font-size: medium;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 0.3px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+  
+.btn-success:hover {
+    background-color: #5065A8;
+}

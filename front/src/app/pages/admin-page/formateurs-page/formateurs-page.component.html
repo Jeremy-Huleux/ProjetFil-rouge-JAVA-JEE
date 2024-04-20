@@ -1,0 +1,43 @@
+<div class="table-container">
+  <h1>Liste des Formateurs</h1>
+  <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th>Téléphone</th>
+          <th>Note Moyenne</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+          @for (formateur of formateurs; track formateurs) {
+              <tr>
+                  <td>{{ formateur.nom }}</td>
+                  <td>{{ formateur.prenom }}</td>
+                  <td>{{ formateur.email }}</td>
+                  <td>{{ formateur.telephone }}</td>
+                  <td>{{ formateur.noteMoyenne }}</td>
+                  <td>
+                    <button (click)="modifierUtilisateur(formateur.id)" class="modifier">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    
+                    <button (click)="supprimerUtilisateur(formateur.id)" class="supprimer">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </td>                  
+              </tr>
+          }
+      </tbody>
+  </table>
+  <a href="#" class="ajouter-button">
+    <button>
+      Ajouter un Formateur
+    </button>
+  </a>
+  <a class="retour-button">
+      <button routerLink="/dashboard">Retour</button>
+  </a>
+</div>

@@ -1,0 +1,46 @@
+<div class="table-container">
+    <h1>Liste des Bootcamps</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>Date deDebut</th>
+            <th>Date de Fin</th>
+            <th>Statut</th>
+            <th>Lieu</th>
+            <th>Formation</th>
+            <th>Nombre d'inscrits</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for (bootcamps of bootcamps; track bootcamps) {
+                <tr>
+                    <td>{{ bootcamps.dateDebut }}</td>
+                    <td>{{ bootcamps.dateFin }}</td>
+                    <td>{{ bootcamps.statut }}</td>
+                    <td>{{ bootcamps.lieu.raisonSociale }}</td>
+                    <td>
+                        @for (formation of bootcamps.formation; track formation) {
+                            {{ formation.nom  + ', '}}
+                        }
+                    </td>
+                    <td>{{ bootcamps.userCount }}</td>
+                    <td>
+                      <button (click)="modifierBootcamp(bootcamps.id)" class="modifier">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      
+                      <button (click)="supprimerBootcamp(bootcamps.id)" class="supprimer">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>                  
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<a href="#" class="ajouter-button">
+    <button>
+        Ajouter un Bootcamp
+    </button>
+</a>

@@ -1,0 +1,43 @@
+button {
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+    justify-content: center;
+    border: 10px solid var(--clr);
+    background-color: #5065A8;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgb(0, 0,0,0.1),
+                inset -15px -15px 15px rgb(255, 255,255,0.2),
+                inset 15px 15px 15px  rgb(0, 0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h3, span {
+    font-size: large;
+    color: aliceblue;
+    margin-bottom: 10px; /* Ajustement pour séparer les titres des chiffres */
+}
+
+p {
+    margin-top: 10px; /* Ajustez cette valeur selon votre besoin */
+    font-size: x-large;
+    color: aliceblue;
+    align-self: center; /* Centrer le texte verticalement */
+}
+
+h1 {
+    padding: 20px;
+    color: #5065A8;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Ajustement pour garder la disposition en ligne */
+    justify-content: center;
+}

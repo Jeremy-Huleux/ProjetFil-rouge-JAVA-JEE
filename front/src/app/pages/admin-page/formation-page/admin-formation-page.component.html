@@ -1,0 +1,72 @@
+<div class="table-container">
+    <h1>Liste des Formations</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom de la formation</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Sous-Theme</th>
+                <!-- <th>image</th> -->
+                <th>Ajouter/Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (formation of formations; track formations) {
+                <tr>
+                    <td>{{ formation.nom }}</td>
+                    <td>{{ formation.description }}</td>
+                    <td>{{ formation.prix }}</td>
+                    <td>{{ formation.sousThemeId.nomSousTheme }}</td>
+                    <!-- <img [src]="formation.img" [alt]="formation.nom" style="width: 80px; height: 80px;"> -->
+
+                    <td>
+                        <button class="modifier">
+                        <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="supprimer">
+                        <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>                  
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" ><button (click)="afficherForm = !afficherForm">Ajouter une formation ?</button></td>
+            </tr>
+        </tfoot>
+    </table>
+    @if(afficherForm){
+    <form [formGroup]="formationForm" (ngSubmit)="onSubmit()">
+        <label>
+            Nom :
+        </label>
+            <input type="text" formControlName="nom" />
+        <label>
+            Description :
+        </label>
+            <input type="text" formControlName="description" />
+        <label>
+            Prix :
+        </label>
+            <input type="number" formControlName="prix" />
+        <!-- <label>
+            img :
+        </label>
+            <input type="text" formControlName="img" /> -->
+        <label>
+            Sous-Theme :
+        </label>
+            <select formControlName="sousThemeId">
+        @for (sousTheme of sousThemes; track sousThemes) {
+            
+                <option [value]="sousTheme.id" >{{sousTheme.nomSousTheme}}</option>
+            
+        }
+        </select> 
+            <!-- Modification du bouton Sumbit, qui sera désactivé si le formulaire n'est pas valide-->
+        <button type="submit" [disabled]="!formationForm.valid">Ajouter une Formation</button>
+    </form>
+}
+</div>

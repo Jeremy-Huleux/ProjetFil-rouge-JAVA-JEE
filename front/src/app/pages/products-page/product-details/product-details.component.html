@@ -1,0 +1,81 @@
+<body>
+    <h2>Détail de la formation</h2>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <div class="header-image">
+                    <div class="logo"></div>
+                    <div class="title">
+                        {{ product.nom }}
+                    </div>
+                </div>
+                <hr>
+
+                @if (!product.img) {
+                    <img class="cover" src="../../../../assets/images/photo2.jpg" alt="IT-Training" />
+                }
+
+                @if (product.img) {
+                    <img class="cover" [src]="product.img" [alt]="product.nom" />
+                }
+
+                @if (product.description) {
+                    <div class="description">
+                        <h3>Description</h3>
+                        <p>{{ product.description }}</p>
+                    </div>
+                }
+
+                @if (product.details) {
+                    <div class="details">
+                        <h3>Détails</h3>
+                        <p>{{ product.details }}</p>
+                    </div>
+                }
+
+                @if (product.prix) {
+                    <div class="prix">
+                        <h3>Prix</h3>
+                        <p>{{ product.prix }}</p>
+                    </div>
+                }
+            </div>
+            <div class="sessions">
+                <h3 class="center-text">Sessions</h3>
+                <table class="center-text">
+                    <thead>
+                        <tr>
+                            <th>Date de début</th>
+                            <th>Date de fin</th>
+                            <th>Lieu</th>
+                            <th>Statut</th>
+                            <th>Inscription</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (bootcamps && bootcamps.length > 0) {
+                            @for (bootcamps of bootcamps; track bootcamps) {
+                                <tr>
+                                    <td>{{ bootcamps.dateDebut }}</td>
+                                    <td>{{ bootcamps.dateFin }}</td>
+                                    <td>{{ bootcamps.lieu.raisonSociale }}</td>
+                                    <td>{{ bootcamps.statut }}</td>
+                                    <td>
+                                        <button class="inscription-button" 
+                                                [attr.disabled]="bootcamps.statut !== 'En attente' ? true : null"
+                                                (click)="selectBootcampForInscription(bootcamps)">
+                                            Inscription
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        }  
+                    </tbody>
+                </table>
+            </div>
+            <div class="actions">
+                <button routerLink="/products" class="inscription-button">Retour</button>
+            </div>
+        </div>
+    </div>
+</body>

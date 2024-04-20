@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.profil-card {
+    width: 300px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.profil-info {
+    margin: 10px 0;
+}

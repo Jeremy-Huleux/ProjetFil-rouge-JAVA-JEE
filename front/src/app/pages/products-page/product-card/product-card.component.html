@@ -1,0 +1,36 @@
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <div class="header-image">
+                    <div class="logo"></div>
+                    <div class="title">
+                        {{ product.nom }}
+                    </div>
+                </div>
+                <hr>
+
+                <div class="image-container">
+                    @if (!product.img) {
+                        <img class="cover" src="../../../../assets/images/photo2.jpg" alt="IT-Training" />
+                    }
+                    @if (product.img) {
+                        <img class="cover" [src]="product.img" [alt]="product.nom" />
+                    }
+                        
+                </div>
+
+                @if (product.description) {
+                    <div class="description">
+                        <p> {{ product.description }}</p>
+                    </div>
+                }
+            </div>
+            <div class="actions">
+                @if (product) {
+                  <button class="details-button" routerLink="/products/formations/{{ product.id }}">Details</button>
+                }
+            </div>
+        </div>
+    </div>
+</body>

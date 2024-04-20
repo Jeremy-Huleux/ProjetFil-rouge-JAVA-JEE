@@ -1,0 +1,64 @@
+<!-- @if(user){
+    @if(user.role === "ADMIN"){ -->
+        <body>
+            <h1>TABLEAU DE BORD ADMIN</h1>
+                    <div class="container" >   
+                        <div class="box1" >
+                            <button routerLink="/dashboard/formation" >
+                                <h3 >
+                                    Formations
+                                </h3>
+                                <span>(Nb de formations)</span>
+                                <br>
+                                <p>{{ nbFormations }}</p>
+                            </button>
+                        </div>
+                        <div class="box1" >
+                            <button routerLink="/dashboard/candidats" >
+                                <h3 >
+                                    Candidats
+                                </h3>
+                                <span>(Nb d'inscrits)</span>
+                                <br>
+                                    <p>{{ nbCandidats }}</p>
+                                
+                            </button>
+                        </div>
+                        <div class="box1">
+                            <button routerLink="/dashboard/stagiaires" >
+                                <h3>
+                                    Stagiaires
+                                </h3>
+                                <span>(Nb d'inscrits)</span>
+                                <br>
+                                <p>{{ nbStagiaires }}</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container" > 
+                        <div class="box1">
+                            <button routerLink="/dashboard/formateurs" >
+                                <h3>
+                                    Formateur
+                                </h3>
+                                <span>(Nb d'inscrits)</span>
+                                    <br>
+                                <p>{{ nbFormateurs }}</p>
+                            </button>
+                        </div>
+                        <div class="container" >
+                            <div class="box1">
+                                <button routerLink="/dashboard/bootcamps" >
+                                    <h3>
+                                        Bootcamps
+                                    </h3>
+                                    <span>(Nb de bootcamps)</span>
+                                    <p>{{ nbBootcamps }}</p>
+                                    <br>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+        </body>
+    <!-- }
+} -->

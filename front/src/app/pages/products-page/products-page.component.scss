@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    width: auto;
+  
+  }
+  
+  h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #90a3e2;
+  }
+  

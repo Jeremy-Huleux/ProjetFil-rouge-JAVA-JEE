@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page de profil</title>
+</head>
+@if(user){
+  <body>
+      <div class="profil-card">
+          <div class="profil-info">
+              <strong>Nom :</strong> <span id="nom">{{user.nom}}</span>
+          </div>
+          <div class="profil-info">
+              <strong>Prénom :</strong> <span id="prenom">{{user.prenom}}</span>
+          </div>
+          <div class="profil-info">
+              <strong>Téléphone :</strong> <span id="telephone">{{user.telephone}}</span>
+          </div>
+          <div class="profil-info">
+              <strong>Email :</strong> <span id="email">{{user.email}}</span>
+          </div>
+          <div class="profil-info">
+              <strong>Pseudo :</strong> <span id="pseudo">{{user.pseudo}}</span>
+          </div>
+          <div class="profil-info">
+              <strong>Mot de passe :</strong> <span id="mdp">*******</span>
+          </div>
+          <div class="profil-info">
+              <strong>Rôle :</strong> <span id="role">{{user.role}}</span>
+          </div>
+      </div>
+  </body>
+}
+</html>

@@ -1,0 +1,116 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 220px; /* Ajoute une marge basse pour dégager de l'espace avec le footer */
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #90a3e2;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #5065A8;
+    color: #F2EEE4;
+}
+
+th {
+    background-color: #5065A8;
+    color: #F2EEE4;
+}
+
+button i {
+    margin-right: 8px;
+    font-size: 1.5em;
+}
+
+button.modifier {
+    color: #4caf50;
+    border: none;
+    background-color: transparent;
+}
+
+button.supprimer {
+    color: #f44336;
+    border: none;
+    background-color: transparent;
+}
+
+.ajouter-button button {
+    margin-top: 25px;
+    margin-right: 10px;
+    padding: 15px 25px;
+    text-align: center;
+    display: inline-block;
+    background-color: rgba(178, 202, 206, 0.6);
+    color: #5065A8;
+    border: 0.2em;
+    border-radius: 25px;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+}
+table {
+    width: 100%;
+}
+td {
+    padding: 10px;
+}
+input, select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+input[type="text"], input[type="email"], input[type="number"], input[type="file"],  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+width: 100%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+input[type="submit"]:hover {
+background-color: #45a049;
+}

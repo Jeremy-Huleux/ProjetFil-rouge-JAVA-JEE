@@ -1,0 +1,39 @@
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="container">
+        <div class="form">
+            <h2>Connectez-vous</h2>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <div class="input-group" >
+                                <input  type="email" formControlName="email" placeholder="Email">
+                                <br>
+                                @if (submitted && !form['email'].valid) {
+                                    <span class="text-danger small">*L'email est invalide ou n'existe pas</span>
+                                }
+                                </div>
+                        <div class="input-group">
+                            <input type="password" formControlName="mdp" placeholder="Mot de passe">
+                            <br>
+                            @if (submitted && !form['mdp'].valid){
+                            <span class="text-danger small">
+                            *Le mot de passe est incorrect
+                            </span>}
+                            </div>
+                            <div class="input-group">
+                                <button type="submit" class="btn btn-success m-4 p-2">Se connecter</button>
+                                <button type="reset" class="btn btn-danger p-2 mb-4">Annuler</button>
+                        <p>
+                            Vous n'avez pas encore de compte ?
+                        </p>
+                                <button  class="btn btn-success" routerLink="/inscription">Inscrivez-vous</button>
+                            </div>
+                </div>
+            </form>
+            </div>
+            </div>
+    </section>
+</body>
